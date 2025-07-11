@@ -1,51 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LambdaChan</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background: #f5f5f5;
-            color: #222;
-            max-width: 800px;
-            margin: auto;
-            padding: 1rem;
-        }
-        h1 {
-            font-size: 2em;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin: 0.5rem 0;
-        }
-        a {
-            text-decoration: none;
-            color: #0066cc;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            margin-top: 2rem;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ config.site_name }} - Home</title>
+    <link rel="stylesheet" href="/static/css/{{ config.theme }}" />
 </head>
 <body>
-    <h1>Welcome to LambdaChan!</h1>
-    <p>Select a board below:</p>
-    <ul>
-        <li><a href="/devel/">/devel/</a></li>
-        <li><a href="/b/">/b/</a></li>
-    </ul>
+    {% include 'includes/navigation.html' %}
 
-    <footer>
-        Powered by TsukiChan + LambdaChan
-    </footer>
+    <main>
+        <h1>Boards</h1>
+        <ul>
+            {% for board in boards %}
+            <li><a href="{{ url_for('get_root', board_name=board[1].strip('/')) }}">{{ board[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    </main>
 </body>
 </html>
