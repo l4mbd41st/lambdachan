@@ -1,4 +1,4 @@
-![image](https://github.com/tsukiame/tsukichan/assets/154212868/f8ab0b5c-762e-45f7-b6eb-049606204675)
+![image](lambdachan.png)
 
 
 # LambdaChan
