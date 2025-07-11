@@ -1,5 +1,5 @@
 # General channel settings
-site_name: "Tsuki Chan"
+site_name: "LambdaChan"
 description: "A simple image board engine."
 allowed_file_types:
   - jpg
