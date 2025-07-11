@@ -129,6 +129,9 @@ def image(name):
 
 @app.route('/board/<name>/')
 def board_view(name):
+    valid_boards = [b.strip('/') for b in config().get('boards', [])]
+    if name not in valid_boards:
+        abort(404)
     return render_template('board.html',
         config=config(),
         boards=boards(),
@@ -137,6 +140,9 @@ def board_view(name):
 
 @app.route('/board/<name>/thread/<pid>')
 def thread_view(name, pid):
+    valid_boards = [b.strip('/') for b in config().get('boards', [])]
+    if name not in valid_boards:
+        abort(404)
     return render_template('thread.html',
         config=config(),
         boards=boards(),
