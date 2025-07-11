@@ -12,3 +12,6 @@ database:
   type: "sqlite"
   uploads: "database/uploads"
   path: "database/tsuki.db"
+
+boards:
+  - /b/
