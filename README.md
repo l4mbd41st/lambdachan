@@ -7,6 +7,15 @@ LambdaChan is an imageboard engine meant to replace vichan, its based off TsukiC
 This project is currently in the very early stages of development and is not in a usable state. Please come back in the future.
 ## TODO
 ### High Priority
+
+#### Moderation
+- [ ] Add a mod panel and admin panel
+- [ ] Add banning threads and comments
+- [ ] Add ip banning
+- [ ] Add roles
+- [ ] Add Capcodes
+---
+
 #### Architecture & Structure
 - [ ] Move logic to modules:
   - [ ] `config.py` for `load_config()`
